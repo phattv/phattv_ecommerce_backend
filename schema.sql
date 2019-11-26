@@ -85,17 +85,17 @@ CREATE TABLE listing (
 ALTER TABLE listing OWNER TO postgres;
 
 --
--- Name: photos; Type: TABLE; Schema: public; Owner: postgres
+-- Name: photo; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE photos (
+CREATE TABLE photo (
     id uuid DEFAULT uuid_generate_v4() NOT NULL,
     listing_id uuid,
     image_url text NOT NULL
 );
 
 
-ALTER TABLE photos OWNER TO postgres;
+ALTER TABLE photo OWNER TO postgres;
 
 --
 -- Name: user; Type: TABLE; Schema: public; Owner: postgres
@@ -136,10 +136,10 @@ bfb2cf85-ad20-4cde-99b1-c5b825504ed2	Gans Air SM 3x3 (Global Version)	4.41000000
 
 
 --
--- Data for Name: photos; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: photo; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY photos (id, listing_id, image_url) FROM stdin;
+COPY photo (id, listing_id, image_url) FROM stdin;
 0c0cfcf8-7e38-4ea7-87ec-4ec51c619eb5	bfb2cf85-ad20-4cde-99b1-c5b825504ed2	https://cdn.shopify.com/s/files/1/0035/5205/1273/products/gan356airsmb31_b0466fee-3e70-43a0-b620-a56f7a94b0c8_1024x1024@2x.jpg?v=1540917923
 fb301606-86af-4cc8-a8fb-66fdaffbb6b4	bfb2cf85-ad20-4cde-99b1-c5b825504ed2	https://cdn.shopify.com/s/files/1/0035/5205/1273/products/gan356airspre7_98bfb3b8-c5bb-405e-9cf1-387b14a00cf2_1024x1024@2x.jpg?v=1540917923
 24f19f32-682d-4e00-b5d7-5839904e0ba6	bfb2cf85-ad20-4cde-99b1-c5b825504ed2	https://cdn.shopify.com/s/files/1/0035/5205/1273/products/gan356airspre8_1c2f7611-4294-4b8f-a6f7-5b6f1b75c63d_1024x1024@2x.jpg?v=1540917923
@@ -180,10 +180,10 @@ ALTER TABLE ONLY listing
 
 
 --
--- Name: photos photos_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: photo photos_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY photos
+ALTER TABLE ONLY photo
     ADD CONSTRAINT photos_pk PRIMARY KEY (id);
 
 
@@ -213,7 +213,7 @@ CREATE INDEX listing_title_index ON listing USING btree (title);
 -- Name: photos_id_uindex; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE UNIQUE INDEX photos_id_uindex ON photos USING btree (id);
+CREATE UNIQUE INDEX photos_id_uindex ON photo USING btree (id);
 
 
 --
@@ -240,10 +240,10 @@ ALTER TABLE ONLY listing
 
 
 --
--- Name: photos photos_listing_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: photo photos_listing_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY photos
+ALTER TABLE ONLY photo
     ADD CONSTRAINT photos_listing_id_fk FOREIGN KEY (listing_id) REFERENCES listing(id);
 
 
