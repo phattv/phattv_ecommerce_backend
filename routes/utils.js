@@ -16,7 +16,14 @@ function handleErrors(res, err) {
     .end();
 }
 
+function handleBadRequest(res, message) {
+  return res
+    .status(400)
+    .send({ error: 'error', message: message || 'Bad Request' });
+}
+
 module.exports = {
   handleGetSuccess,
   handleErrors,
+  handleBadRequest,
 };
