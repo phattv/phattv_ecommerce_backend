@@ -7,8 +7,12 @@ module.exports = {
   timestampFormat: dateFormat + ' ' + timeFormat,
   tables: {
     listing: 'listing',
+    category: 'category',
+    user: 'user',
+    photo: 'photo',
   },
   routes: {
     listingsList: '/listings',
+    listingsDetails: '/listings/:id',
   },
 };
