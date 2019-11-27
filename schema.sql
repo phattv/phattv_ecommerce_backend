@@ -132,6 +132,7 @@ a089a980-1071-4d7f-9258-f31f48104f67	Eletronics	\N	\N	2019-11-27 03:31:23	2019-1
 
 COPY listing (id, title, price, image_url, description, status, created_at, updated_at, seller_id, category_id) FROM stdin;
 bfb2cf85-ad20-4cde-99b1-c5b825504ed2	Gans Air SM 3x3 (Global Version)	4.41000000000000014	https://thegioirubik.com/wp-content/uploads/2017/09/Gan-SM-Std1-510x510.jpg	The GAN 356 Air SM has arrived! This highly-anticipated successor to the GAN 356 Air UM features an all-new design that has been optimized for magnetization, with specialized slots for holding the magnets, a new and improved elasticity system (GES V2), and a unique honeycomb design on the pieces. The Air SM feels very fast and quiet right out of the box. Each Air SM comes with a full set of 7 GES V2 spring components, GAN full bright stickers, a GAN CFOP tutorial pamphlet, plastic adjusting tool, and a GAN 356 Air SM VIP card.\n\nThe current 3x3 WR Average of 5.97 seconds was set by Feliks Zemdegs using this cube.	L	2019-11-27 03:38:47	2019-11-27 03:38:47	cad85b39-3854-449c-ad2b-50d34627ae64	5c4a51d4-b590-434b-96ca-742c3ba248e7
+6d5f2c31-a530-47b9-9a80-8ef857c3e156	Vintage Apple Extended Keyboard M0115 Mechanical ALPS Orange Switches Box+cable	341.120000000000005	https://i.ebayimg.com/images/g/X4QAAOSwz2Bdvh1l/s-l1600.jpg	Vintage Apple Extended Keyboard M0115 Mechanical ALPS Orange Switches.Box + cable.\n\nGreat vintage condition.\n\nPlease see pictures.\n\nPictures are part of the description.\n\nVintage item. Sold as is.\n\nI have no way of testing it. So, it’s not tested.	L	2019-11-27 04:32:52	2019-11-27 04:32:52	cad85b39-3854-449c-ad2b-50d34627ae64	1e77d6d4-ed7e-4575-8b87-aef45f7ef704
 \.
 
 
@@ -151,6 +152,18 @@ fb301606-86af-4cc8-a8fb-66fdaffbb6b4	bfb2cf85-ad20-4cde-99b1-c5b825504ed2	https:
 b0a6e162-0e8b-4faa-a479-8ead364fc872	bfb2cf85-ad20-4cde-99b1-c5b825504ed2	https://cdn.shopify.com/s/files/1/0035/5205/1273/products/gan356airsmpre3_1024x1024@2x.jpg?v=1540917923
 d1bef1b0-de0b-4fe2-8dc4-75a43d02259e	bfb2cf85-ad20-4cde-99b1-c5b825504ed2	https://cdn.shopify.com/s/files/1/0035/5205/1273/products/gan356airsmpre4_1024x1024@2x.jpg?v=1540917923
 fe87472b-ab69-4b60-8f89-6ce308613967	bfb2cf85-ad20-4cde-99b1-c5b825504ed2	https://cdn.shopify.com/s/files/1/0035/5205/1273/products/gan356airspre6_e10876a6-b743-41f7-87c4-c9933c38077b_1024x1024@2x.jpg?v=1540917923
+1f665904-0d77-4d2a-8fd0-b39abc8b8e0f	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/X4QAAOSwz2Bdvh1l/s-l1600.jpg
+20bf8651-a856-4247-854b-015fc576fe2f	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/dQAAAOSwbv9dvh1u/s-l1600.jpg
+8bac92ae-92e3-4a8a-ab49-ee706956586c	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/lK8AAOSwP3JdxNRw/s-l1600.jpg
+56c2781c-7485-4a31-8568-dfcfcd8b743f	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/b5cAAOSwEhldvh1o/s-l1600.jpg
+f4f13063-a74c-4944-bc89-77407852c095	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/VHQAAOSwnI9dvh1y/s-l1600.jpg
+71865687-6d17-4967-9904-9b71c957c33e	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/GDoAAOSw1Txdvh11/s-l1600.jpg
+b88f2182-be38-49ca-99ce-3eaf9a0f146c	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/DUEAAOSwlkhdvh12/s-l1600.jpg
+3b2a881b-761b-4993-bf67-7397e6352bcb	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/O78AAOSwwppdvh16/s-l1600.jpg
+90812cfa-3708-4345-bbbd-d083e1d4d372	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/S-IAAOSwoSldvh19/s-l1600.jpg
+02072ccc-8f5c-4144-ac54-df95bf03eece	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/k0kAAOSw5K5dvh2D/s-l1600.jpg
+2b07ff2b-62a2-4904-a890-8b8d9e101976	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/C2UAAOSwhY1dvh2B/s-l1600.jpg
+cc12517b-c263-41d3-83cb-3bbda9c3bc62	6d5f2c31-a530-47b9-9a80-8ef857c3e156	https://i.ebayimg.com/images/g/0TgAAOSw-~tdvh1-/s-l1600.jpg
 \.
 
 
