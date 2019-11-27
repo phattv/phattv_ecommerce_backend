@@ -34,7 +34,7 @@ const configListingsApis = (app, knex) => {
         promises = [];
         data.map(async record => {
           promises.push(
-            new Promise(resolve => {
+            new Promise((resolve, reject) => {
               let categoryQuery, userQuery;
               if (record.category_id !== '') {
                 categoryQuery = generateCategoryQuery(record.category_id);
@@ -51,14 +51,16 @@ const configListingsApis = (app, knex) => {
                   record.seller = mergedData[1];
                   delete record.seller_id;
 
-                  resolve();
+                  resolve(record);
                 })
-                .catch(err => handleErrors(res, err));
+                .catch(err => reject(err));
             }),
           );
         });
 
-        Promise.all(promises).then(() => handleGetSuccess(res, data));
+        Promise.all(promises)
+          .then(() => handleGetSuccess(res, data))
+          .catch(() => handleErrors(res, err));
       })
       .catch(err => handleErrors(res, err));
   });
