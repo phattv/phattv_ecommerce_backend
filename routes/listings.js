@@ -3,10 +3,19 @@ const { handleGetSuccess, handleErrors, handleBadRequest } = require('./utils');
 
 const configListingsApis = (app, knex) => {
   app.get(routes.listingsList, (req, res, next) => {
-    // TODO: pagination
-    return knex
+    const query = knex
       .select()
       .from(tables.listing)
+      .orderBy('created_at', 'desc');
+
+    // Setup for load more
+    const reqQuery = req.query || {};
+    if (reqQuery.limit) {
+      const limit = parseInt(reqQuery.limit, 10);
+      query.offset(0).limit(limit);
+    }
+
+    return query
       .then(data => {
         promises = [];
         data.map(async record => {
@@ -21,6 +30,7 @@ const configListingsApis = (app, knex) => {
                 userQuery = generateUserQuery(record.seller_id);
               }
 
+              // Fetch category & seller information
               Promise.all([categoryQuery, userQuery])
                 .then(mergedData => {
                   record.category = mergedData[0];
@@ -64,6 +74,7 @@ const configListingsApis = (app, knex) => {
 
         photoQuery = generatePhotoQuery(record.id);
 
+        // Fetch category, seller information & photos
         Promise.all([categoryQuery, userQuery, photoQuery])
           .then(mergedData => {
             record.category = mergedData[0];
