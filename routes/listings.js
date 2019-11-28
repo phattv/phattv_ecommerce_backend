@@ -3,10 +3,7 @@ const { handleGetSuccess, handleErrors, handleBadRequest } = require('./utils');
 
 const configListingsApis = (app, knex) => {
   app.get(routes.listingsList, (req, res, next) => {
-    const query = knex
-      .select()
-      .from(tables.listing)
-      .orderBy('created_at', 'desc');
+    const query = knex.select().from(tables.listing);
 
     // Setup for load more
     const reqQuery = req.query || {};
@@ -22,6 +19,11 @@ const configListingsApis = (app, knex) => {
     if (reqQuery.seller_id) {
       query.where({ seller_id: reqQuery.seller_id });
     }
+
+    // Setup sort
+    const sortBy = reqQuery.sort_by || 'created_at';
+    const sortOrder = reqQuery.sort_order || 'desc';
+    query.orderBy(sortBy, sortOrder);
 
     return query
       .then(data => {
