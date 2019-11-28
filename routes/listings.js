@@ -15,6 +15,14 @@ const configListingsApis = (app, knex) => {
       query.offset(0).limit(limit);
     }
 
+    // Setup filter
+    if (reqQuery.category_id) {
+      query.where({ category_id: reqQuery.category_id });
+    }
+    if (reqQuery.seller_id) {
+      query.where({ seller_id: reqQuery.seller_id });
+    }
+
     return query
       .then(data => {
         promises = [];
