@@ -4,7 +4,7 @@ const express = require('express'),
   http = require('http'),
   compression = require('compression');
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 // Set up the express app
 const app = express();

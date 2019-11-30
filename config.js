@@ -6,8 +6,8 @@ const localConfigurations = {
   SQL_DATABASE: 'phattv_ecommerce',
 };
 const productionConfigurations = {
-  SQL_USER: 'phat',
-  SQL_PASSWORD: 'phat12345',
+  SQL_USER: 'postgres',
+  SQL_PASSWORD: '123123',
   SQL_DATABASE: 'phattv_ecommerce',
 };
 
